@@ -1,0 +1,106 @@
+/* 
+  FARMFLEET STYLESHEET (Tailwind CSS SPA Version)
+  Custom styles for animations, glassmorphism, and maps.
+*/
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+}
+
+/* Section routing overlays */
+.hide-section {
+  display: none !important;
+}
+
+/* Modals */
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+/* Background patterns */
+.bg-farm-login {
+  background-image: linear-gradient(135deg, rgba(17, 94, 51, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+}
+.bg-farm-role {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(248, 249, 250, 1)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+}
+.bg-pattern {
+  background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Toast animations */
+.toast-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.toast-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Map configurations */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.map-pin:hover {
+  transform: translate(-50%, -100%) scale(1.2);
+  z-index: 10;
+}
+.pin-idle {
+  filter: hue-rotate(90deg);
+}
+.pin-working {
+  filter: hue-rotate(0deg);
+}
+.pin-broken {
+  filter: hue-rotate(200deg);
+}
+
+/* Admin panel specifications */
+.admin-bg {
+  background-color: #121418;
+}
+.admin-card {
+  background-color: #1A1D24;
+  border: 1px solid #2A2E39;
+}
+.admin-text-glow {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* Styled Map Container Grid */
+#map-container {
+  background-image: 
+    radial-gradient(circle, #059669 1px, transparent 1.5px),
+    linear-gradient(to right, rgba(209, 213, 219, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(209, 213, 219, 0.3) 1px, transparent 1px);
+  background-size: 30px 30px, 30px 30px, 30px 30px;
+  background-color: #f0fdf4; /* Emerald light wash */
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
